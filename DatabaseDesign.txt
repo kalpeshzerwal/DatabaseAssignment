@@ -1,0 +1,113 @@
+Step No 1: purpose of the database
+	
+	-The main purpose of this database is to managing and storing the data for effectively managing a class or tuition teaching multiple courses and subjects.
+	-This is all about class managemennt system.
+
+Step No 2: Find and organize the information required
+
+	-Student information:student_id,student_fname,student_lname,email,password,dob,mobile_no,gender,address
+	-Courses information:course_id,subject_code,subject_name
+	-Faculty information:Teacher_id,designation,teacher_fname,teacher_lname,dob,email,password,mobile,address
+	-Payment information:id,payment,year
+	-Batch information:id,b_startdate,b_enddate
+	-fee information:fee_paid,remining_fee,total_fee
+
+Step No 3: Divide the information into tables and major entities
+	
+	-users
+	-admin_notification
+	-student_attendance
+	-courses
+	-courses_status
+	-faculty
+	-payment
+	-payment_status
+	-batch
+	-fee 
+
+Step No 4: Turn information items into columns
+
+	roles
+		-int id
+		-int user_id
+		-varchar roll_assign
+
+	users                      
+	  -int id
+	  -varchar f_name
+	  -varchar l_name
+	  -varchar address
+	  -varchar age
+	  -varchar gender
+	  -varchar dob
+	  -varchar mobile
+	  -varchar addess
+	  -varchar email
+	  -varchar password
+	  -varchar user_type
+
+	courses		
+		-int id
+		-varchar course_code
+		-varchar course_name
+	
+	admin_notifications
+		-int users_id
+		-varchar notification
+		-varchar url
+
+	faculty
+		-int id
+		-int user_id
+		-varchar designation
+		-boolean status
+
+	payment
+		-int faculty_id
+		-varchar payment
+		-varchar month
+		-boolean status
+
+	batch
+		-int id
+		-int course_id
+		-int branch_id
+		-date start_date
+		-date end_date
+	
+	fees
+		-int course_id
+		-int users_id
+		-varchar total_paid_fee
+		-varchar remaining_fee
+
+	branch
+		-int id
+		-varchar branch_name
+		-varchar branch_address
+		
+  exam
+  	-int batch_id
+  	-int course_id
+  	-date exam_date
+
+
+
+Step No-5: Specify primary keys
+
+	users
+	  -users_id
+
+	courses
+		-courses_id
+
+	faculty
+		-faculty_id
+
+	batch
+		-batch_id
+
+	branch
+		-branch_id
+
+		
